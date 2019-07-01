@@ -41,36 +41,36 @@ public class ChanceTest {
     @Test
     public void should_get_not() {
         // given
-        final double not = 0.7;
+        final Chance not = new Chance(0.7);
 
         // when
         Chance result = chance.not();
 
         // then
-        assertThat(result.getFraction()).isEqualTo(not);
+        assertThat(result).isEqualTo(not);
     }
 
     @Test
     public void should_get_and() {
         // given
-        final double and = 0.12;
+        final Chance and = new Chance(0.12);
 
         // when
         Chance result = chance.and(operator);
 
         // then
-        assertThat(result.getFraction()).isEqualTo(and);
+        assertThat(result).isEqualTo(and);
     }
 
     @Test
     public void should_get_or() {
         // given
-        final double or = 0.58;
+        final Chance or = new Chance(0.58);
 
         // when
         Chance result = chance.or(operator);
 
         // then
-        assertThat(result.getFraction()).isEqualTo(or);
+        assertThat(result).isEqualTo(or);
     }
 }
